@@ -11,4 +11,12 @@ class ArrayTest
         ArraysUtils.bubbleSort(intArray);
         Assertions.assertTrue(ArraysUtils.isSorted(intArray));
     }
+
+    @Test
+    void binarySearch()
+    {
+        int[] intArray = new int[]{ 3, 6, 7, 8, 10, 11};
+        Assertions.assertEquals(2, ArraysUtils.binarySearch(intArray, 7));
+        Assertions.assertEquals(-1, ArraysUtils.binarySearch(intArray, 17));
+    }
 }
